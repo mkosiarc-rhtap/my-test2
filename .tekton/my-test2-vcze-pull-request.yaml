@@ -407,6 +407,8 @@ spec:
       params:
       - name: IMAGE
         value: $(tasks.build-container.results.IMAGE_URL)
+      - name: ADDITIONAL_TAGS
+        value: ["pull-request-{{pull_request_number}}", "from-branch-{{source_branch}}", "{{target_branch}}"]
       runAfter:
       - build-container
       taskRef:

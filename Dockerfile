@@ -1,5 +1,5 @@
 FROM registry.access.redhat.com/ubi8/ubi:latest
 
-RUN mkdir dir
+RUN dnf -y install git
 RUN ls
 
